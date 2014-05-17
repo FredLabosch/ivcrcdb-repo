@@ -8,7 +8,7 @@ end
 def make_patients
   admin = Patient.create!( name:     "Patient", first_name: "Example",
                         gender: "male",
-                        birthday: "burzeltag",
+                        birthday: "1.1.1970",
                         age: 99,
                         street: "Teststreet",
                         zip_code: "12345",
@@ -21,7 +21,7 @@ def make_patients
     name  = Faker::Name.last_name
     first_name = Faker::Name.first_name
     gender = "male"
-    birthday = "burzeltag"
+    birthday = rand(-70.years..-20.years).ago
     age = Faker::Number.number(2)
     street = Faker::Address.street_name
     zip_code = Faker::Address.zip_code

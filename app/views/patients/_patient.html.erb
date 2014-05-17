@@ -1,6 +1,9 @@
 <tr>
   <td><%= patient.name %></td>
   <td><%= patient.first_name %></td>
-  <td><%= patient.age %></td>
-  <td><%= link_to "show", patient, method: :show %></td>
+  <td><%= patient.birthday %></td>
+  <td><%= patient.zip_code %></td>
+  <td><%= patient.city %></td>
+  <td><%= link_to "show", patient, method: :show %>
+      <%= link_to "delete", patient, method: :delete %></td>
 </tr>
