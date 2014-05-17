@@ -4,11 +4,13 @@
 <%= will_paginate %>
 
 <table class="table table-bordered table-striped table-condensed table-hover" name="patients">
+  <th>#</th>
   <th>Name</th>
   <th>First Name</th>
   <th>Birthday</th>
   <th>Zip Code</th>
   <th>City</th>
+  <th>Updated at</th>
   <th colspan="2">Actions</th>
   <%= render @patients %>
 </table>
