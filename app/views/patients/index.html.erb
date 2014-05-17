@@ -1,2 +1,14 @@
-<h1>Patients#index</h1>
-<p>Find me in app/views/patients/index.html.erb</p>
+<% provide(:title, 'All patients') %>
+<h1>All patients</h1>
+
+<%= will_paginate %>
+
+<table class="table table-bordered table-striped table-condensed table-hover" name="patients">
+  <th>Name</th>
+  <th>First Name</th>
+  <th>Age</th>
+  <th>Actions</th>
+  <%= render @patients %>
+</table>
+
+<%= will_paginate %>

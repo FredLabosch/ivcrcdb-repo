@@ -7,6 +7,12 @@
       <jdbc-url>jdbc:sqlite:D:\ivcrcdb\rails\ivcrcdb\db\development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails ivcrcdb: test" uuid="074bde92-12fb-4304-bb99-26d2ba86bb58">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\ivcrcdb\rails\ivcrcdb\db\test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 
