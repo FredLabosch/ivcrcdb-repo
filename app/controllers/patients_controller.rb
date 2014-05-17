@@ -12,7 +12,13 @@ class PatientsController < ApplicationController
   end
 
   def create
-    @patient = Patient.new(user_params)
+    @patient = Patient.new(patient_params)
+    if @patient.save
+      flash[:success] = "Patient created!"
+      redirect_to @patient
+    else
+      render 'new'
+    end
   end
 
   def edit

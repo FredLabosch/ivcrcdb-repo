@@ -6,6 +6,10 @@
   <td><%= patient.zip_code %></td>
   <td><%= patient.city %></td>
   <td><%= patient.updated_at %></td>
-  <td><%= link_to "show", patient %>
-      <%= link_to "delete", patient, method: :delete %></td>
+  <td>
+        <%= link_to "show", patient, class: "btn btn-mini btn-primary" %>
+        <%= link_to "delete", patient, method: :delete, data: { confirm: "Are you sure you want to delete patient #{patient.first_name} #{patient.name}?" },
+                  class: "btn btn-mini btn-danger" %>
+  </td>
+
 </tr>

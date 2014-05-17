@@ -1,2 +1,8 @@
-<h1>Patients#new</h1>
-<p>Find me in app/views/patients/new.html.erb</p>
+<h1>Add a Patient</h1>
+
+<div class="span6 offset3">
+<%= form_for(@patient) do |f| %>
+    <%= render 'fields', f: f %>
+    <%= f.submit "Add patient", class: "btn btn-large btn-success" %>
+<% end %>
+</div>
