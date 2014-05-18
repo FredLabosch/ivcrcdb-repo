@@ -6,6 +6,7 @@ class CreatePatients < ActiveRecord::Migration
       t.string  :gender
       t.string  :birthday
       t.integer :age
+      t.string  :profession
       t.string  :street
       t.string  :zip_code
       t.string  :city

@@ -49,6 +49,7 @@ class PatientsController < ApplicationController
     :gender,
     :birthday,
     :age,
+    :profession,
     :street,
     :zip_code,
     :city,

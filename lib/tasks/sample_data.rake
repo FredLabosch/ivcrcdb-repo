@@ -6,23 +6,13 @@ namespace :db do
 end
 
 def make_patients
-  admin = Patient.create!( name:     "Patient", first_name: "Example",
-                        gender: "male",
-                        birthday: "1.1.1970",
-                        age: 99,
-                        street: "Teststreet",
-                        zip_code: "12345",
-                        city: "New York",
-                        phone: "030 / 123456789",
-                        cell_phone: "0160 / 123456789",
-                        naa: "testNaa")
-
   99.times do |n|
     name  = Faker::Name.last_name
     first_name = Faker::Name.first_name
     gender = "male"
     birthday = rand(-70.years..-20.years).ago
     age = Faker::Number.number(2)
+    profession = Faker::Company.catch_phrase
     street = Faker::Address.street_name
     zip_code = Faker::Address.zip_code
     city = Faker::Address.city
@@ -35,6 +25,7 @@ def make_patients
                  gender: gender,
                  birthday: birthday,
                  age: age,
+                 profession: profession,
                  street: street,
                  zip_code: zip_code,
                  city: city,
