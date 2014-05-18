@@ -48,7 +48,6 @@ class PatientsController < ApplicationController
     :first_name,
     :gender,
     :birthday,
-    :age,
     :profession,
     :street,
     :zip_code,

@@ -10,7 +10,7 @@ def make_patients
     name  = Faker::Name.last_name
     first_name = Faker::Name.first_name
     gender = "male"
-    birthday = rand(-70.years..-20.years).ago
+    birthday = rand(10..100).years.ago
     age = Faker::Number.number(2)
     street = Faker::Address.street_name
     zip_code = Faker::Address.zip_code

@@ -23,8 +23,8 @@
     <%= @patient.birthday %>
   </p>
   <p>
-    <strong>Age:</strong>
-    <%= @patient.age %>
+    <strong>Age (today):</strong>
+    <%= get_age_from_date(@patient.birthday.to_date)  %>
   </p>
   <p>
     <strong>Street:</strong>
