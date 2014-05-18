@@ -1,0 +1,2 @@
+class ExaminationsController < ApplicationController
+end
