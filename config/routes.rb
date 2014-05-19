@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :patients
   resources :examinations, only: [:create, :destroy]
+  resources :general_infos, only: [:create, :destroy]
 
   root 'static_pages#home'
   match '/home',    to: 'static_pages#home',    via: 'get'
