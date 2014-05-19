@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "static_pages/about"
 
   resources :patients
+  resources :examinations, only: [:create, :destroy]
 
   root 'static_pages#home'
   match '/home',    to: 'static_pages#home',    via: 'get'
