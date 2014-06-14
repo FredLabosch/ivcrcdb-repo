@@ -3,4 +3,10 @@
   <data-source source="LOCAL" name="Rails ivcrcdb: development" uuid="b7e55f94-40fd-4f56-994e-c6652374e164">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails ivcrcdb: test" uuid="074bde92-12fb-4304-bb99-26d2ba86bb58">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails ivcrcdb: production" uuid="a7362d46-ddbd-4975-bc75-7b5f8dfbb7af">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   get "static_pages/help"
   get "static_pages/about"
 
-  resources :patients
-  resources :examinations, only: [:create, :destroy]
+  resources :patients do
+ #   collection: [:export => :post]
+    resources :examinations
+  end
 
   root 'static_pages#home'
   match '/home',    to: 'static_pages#home',    via: 'get'

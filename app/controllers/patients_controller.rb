@@ -41,6 +41,10 @@ class PatientsController < ApplicationController
     redirect_to patients_url
   end
 
+  def export
+
+  end
+
   private
 
   def patient_params

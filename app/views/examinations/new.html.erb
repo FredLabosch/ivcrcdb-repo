@@ -1,0 +1,8 @@
+<h1>Add an Examination</h1>
+
+<div class="span6 offset3">
+<%= form_for([@patient, @examination]) do |f| %>
+    <%= render 'fields', f: f %>
+    <%= f.submit "Add examination", class: "btn btn-large btn-success" %>
+<% end %>
+</div>

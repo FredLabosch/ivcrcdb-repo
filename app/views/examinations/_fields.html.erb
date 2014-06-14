@@ -1,0 +1,26 @@
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :examination_date %>
+<%= f.text_field :examination_date %>
+
+<%= f.label :short_description %>
+<%= f.text_field :short_description %>
+
+<%= f.label :examiner %>
+<%= f.text_field :examiner %>
+
+<%= f.label :profession %>
+<%= f.text_field :profession %>
+
+<%= f.label :external_data %>
+<%= f.check_box :external_data %>
+
+<%= f.label :usable_data %>
+<%= f.check_box :usable_data %>
+
+<%= f.label :comment_patient %>
+<%= f.text_area :comment_patient %>
+
+<%= f.label :comment_examiner %>
+<%= f.text_area :comment_examiner %>
+

@@ -1,0 +1,12 @@
+<tr>
+  <td><%= examination.examination_date %></td>
+  <td><%= examination.short_description %></td>
+  <td><%= examination.examiner %></td>
+  <td><%= examination.updated_at %></td>
+  <td>
+    <%= link_to "show", [examination.patient, examination], class: "btn btn-mini btn-primary" %>
+    <%= link_to "delete", [examination.patient, examination],  method: :delete, data: { confirm: "Are you sure you want to delete examination #{examination.short_description} #{examination.examination_date}?" },
+                class: "btn btn-mini btn-danger" %>
+  </td>
+
+</tr>

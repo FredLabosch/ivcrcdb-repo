@@ -4,9 +4,11 @@
 <%= will_paginate %>
 
 <%= link_to 'Add Patient', new_patient_path(@patient), class: "btn btn-default btn-success" %>
+<%= link_to 'Export Patients', "#", id: "export_button", class: "btn btn-default btn-success", style: "visibility:hidden;" %>
 
-<table class="table table-bordered table-striped table-condensed table-hover" name="patients">
+<table class="table table-bordered table-striped table-condensed table-hover" name="patients" id="patients">
   <th>#</th>
+  <th>id</th>
   <th>Name</th>
   <th>First Name</th>
   <th>Birthday</th>
@@ -14,7 +16,7 @@
   <th>City</th>
   <th>Updated at</th>
   <th colspan="2">Actions</th>
-  <%= render @patients %>
+        <%= render @patients %>
 </table>
 
 <%= will_paginate %>

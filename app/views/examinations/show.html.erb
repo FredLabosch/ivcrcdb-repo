@@ -1,0 +1,47 @@
+
+<%= render :partial => "shared/subnavi" %>
+<section>
+  <h1>
+    <%#= gravatar_for @user %>
+    Examination
+  </h1>
+</section>
+<section>
+    <p>
+        <strong>Examination date:</strong>
+        <%= @examination.examination_date %>
+    </p>
+    <p>
+        <strong>Examiner:</strong>
+        <%= @examination.examiner %>
+    </p>
+    <p>
+        <strong>Age at examination:</strong>
+        <%= @examination.age_at_examination %>
+    </p>
+  <p>
+    <strong>Profession:</strong>
+    <%= @examination.profession %>
+  </p>
+  <p>
+    <strong>External data:</strong>
+    <%= @examination.external_data  %>
+  </p>
+  <p>
+    <strong>Usable data:</strong>
+    <%= @examination.usable_data %>
+  </p>
+  <p>
+    <strong>Comment patient:</strong>
+    <%= @examination.comment_patient %>
+  </p>
+  <p>
+    <strong>Comment examiner:</strong>
+    <%= @examination.comment_examiner %>
+  </p>
+  <p>
+    <strong>Short description:</strong>
+    <%= @examination.short_description %>
+  </p>
+    <%= link_to 'Edit Examination', [@patient, @examination], class: "btn btn-default btn-primary" %>
+</section>

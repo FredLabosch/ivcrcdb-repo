@@ -1,0 +1,15 @@
+<% provide(:title, 'All examinations') %>
+<h1>All examinations (<%= examinations.count %>)</h1>
+
+<%= will_paginate examinations %>
+
+<table class="table table-bordered table-striped table-condensed table-hover" name="examinations">
+  <th>Date</th>
+  <th>Description</th>
+  <th>Examiner</th>
+  <th>Updated at</th>
+  <th colspan="2">Actions</th>
+  <%= render examinations %>
+</table>
+
+<%= will_paginate examinations %>

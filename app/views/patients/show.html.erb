@@ -52,3 +52,10 @@
   </p>
     <%= link_to 'Edit Patient', edit_patient_path(@patient), class: "btn btn-default btn-primary" %>
 </section>
+
+<section>
+  <% if @patient.examinations.any? %>
+        <%= render :partial => 'examinations/examination_table', :locals => {:examinations => @patient.examinations.paginate(:per_page => 5, :page => params[:page])} %>
+  <% end %>
+  <%= link_to 'Add Examination', new_patient_examination_path(@patient), class: "btn btn-default btn-success" %>
+</section>

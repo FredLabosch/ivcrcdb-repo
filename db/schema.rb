@@ -11,12 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519195254) do
+ActiveRecord::Schema.define(version: 20140610184826) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "allergies", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "allergies2examinations", force: true do |t|
+    t.integer "examination_id"
+    t.integer "allergies_id"
+  end
 
   create_table "examinations", force: true do |t|
     t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "examination_date"
+    t.string   "examiner"
+    t.integer  "age_at_examination"
+    t.string   "profession"
+    t.boolean  "external_data"
+    t.boolean  "usable_data"
+    t.string   "comment_patient"
+    t.string   "comment_examiner"
+    t.string   "short_description"
   end
 
   create_table "general_infos", force: true do |t|
@@ -31,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140519195254) do
     t.boolean  "usable_data"
     t.string   "comments_patient"
     t.string   "comments_examiner"
+    t.string   "short_description"
   end
 
   create_table "patients", force: true do |t|
