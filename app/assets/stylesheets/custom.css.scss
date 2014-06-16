@@ -2,8 +2,7 @@
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
-$blue: #3bbfce;
+$grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -55,7 +54,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: $grayLight;
 }
 
 p {
@@ -87,12 +86,12 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
   a {
     color: $gray;
     &:hover {
-      color: $gray-darker;
+      color: $grayDarker;
     }
   }
   small {
@@ -113,7 +112,7 @@ footer {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $gray-lighter;
+    border-top: 1px solid $grayLighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -143,7 +142,7 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    border-left: 1px solid $grayLighter;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -201,9 +200,9 @@ input {
   li {
     overflow: auto;
     padding: 10px 0;
-    border-top: 1px solid $gray-lighter;
+    border-top: 1px solid $grayLighter;
     &:last-child {
-      border-bottom: 1px solid $gray-lighter;
+      border-bottom: 1px solid $grayLighter;
     }
   }
 }
@@ -223,7 +222,7 @@ input {
   display: block;
 }
 .timestamp {
-  color: $gray-light;
+  color: $grayLight;
 }
 .gravatar {
   float: left;
