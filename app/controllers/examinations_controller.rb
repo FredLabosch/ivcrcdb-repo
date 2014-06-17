@@ -13,7 +13,7 @@ class ExaminationsController < ApplicationController
 
   def show
     @patient = Patient.find(params[:id])
-    @examination = @patient.examinations.build
+    @examination = @patient.examinations.build(examination_params)
   end
 
   def edit
@@ -45,7 +45,8 @@ class ExaminationsController < ApplicationController
   end
 
   def examination_params
-    params.require(:examination).permit(:examination_date,
+    params.require(:examination).permit(
+    :examination_date,
     :examiner,
     :profession,
     :external_data,

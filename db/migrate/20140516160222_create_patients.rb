@@ -14,6 +14,8 @@ class CreatePatients < ActiveRecord::Migration
       t.string  :cell_phone
       t.string  :naa
 
+      t.references :examination, index: true
+
       t.timestamps
     end
   end

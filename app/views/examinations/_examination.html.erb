@@ -4,6 +4,7 @@
   <td><%= examination.examiner %></td>
   <td><%= examination.updated_at %></td>
   <td>
+    <%#=raise "#{examination.to_yaml}"%>
     <%= link_to "show", [examination.patient, examination], class: "btn btn-mini btn-primary" %>
     <%= link_to "delete", [examination.patient, examination],  method: :delete, data: { confirm: "Are you sure you want to delete examination #{examination.short_description} #{examination.examination_date}?" },
                 class: "btn btn-mini btn-danger" %>

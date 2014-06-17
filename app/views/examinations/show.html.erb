@@ -1,5 +1,5 @@
 
-<%= render :partial => "shared/subnavi" %>
+<%#= render :partial => "shared/subnavi" %>
 <section>
   <h1>
     <%#= gravatar_for @user %>
@@ -7,41 +7,44 @@
   </h1>
 </section>
 <section>
+  <%= form_for @examination do |f| %>
     <p>
         <strong>Examination date:</strong>
-        <%= @examination.examination_date %>
+        <%= f.examination_date %>
     </p>
     <p>
         <strong>Examiner:</strong>
-        <%= @examination.examiner %>
+        <%= f.examiner %>
     </p>
     <p>
         <strong>Age at examination:</strong>
-        <%= @examination.age_at_examination %>
+        <%= f.age_at_examination %>
     </p>
   <p>
     <strong>Profession:</strong>
-    <%= @examination.profession %>
+    <%= f.profession %>
   </p>
   <p>
     <strong>External data:</strong>
-    <%= @examination.external_data  %>
+    <%= f.external_data  %>
   </p>
   <p>
     <strong>Usable data:</strong>
-    <%= @examination.usable_data %>
+    <%= f.usable_data %>
   </p>
   <p>
     <strong>Comment patient:</strong>
-    <%= @examination.comment_patient %>
+    <%= f.comment_patient %>
   </p>
   <p>
     <strong>Comment examiner:</strong>
-    <%= @examination.comment_examiner %>
+    <%= f.comment_examiner %>
   </p>
   <p>
     <strong>Short description:</strong>
-    <%= @examination.short_description %>
+    <%= f.short_description %>
   </p>
+  <%end%>
+  <%#= raise "#{@examination.to_yaml}"%>
     <%= link_to 'Edit Examination', [@patient, @examination], class: "btn btn-default btn-primary" %>
 </section>
