@@ -12,7 +12,7 @@ class ExaminationsController < ApplicationController
   end
 
   def show
-    @patient = Patient.find(params[:id])
+    @patient = Patient.find(params[:patient_id])
     @examination = @patient.examinations.build(examination_params)
   end
 
