@@ -137,6 +137,34 @@ aside {
   margin-right: 10px;
 }
 
+.patient_header {
+  /*float: left;*/
+  height: 1%;
+  overflow: hidden;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #0099CC;
+  /*border:1px solid #000;*/
+  border-radius:5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -khtml-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.patient_sub_header {
+  float: left;
+  height: 1%;
+  overflow: hidden;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #0099CC;
+  /*border:1px solid #000;*/
+  border-radius:5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -khtml-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+}
+
 .stats {
   overflow: auto;
   a {

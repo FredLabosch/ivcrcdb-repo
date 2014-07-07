@@ -1,0 +1,63 @@
+<div class="patient_header">
+  <h3>
+    <%#= gravatar_for @user %>
+    Patient
+  </h3>
+
+  <div class="patient_sub_header">
+    <p>
+      <strong>Name:</strong>
+      <%= @patient.name %>
+    </p>
+    <p>
+      <strong>First Name:</strong>
+      <%= @patient.first_name %>
+    </p>
+  </div>
+  <div class="patient_sub_header">
+    <p>
+      <strong>Gender:</strong>
+      <%= @patient.gender %>
+    </p>
+    <p>
+      <strong>Birthday:</strong>
+      <%= @patient.birthday %>
+    </p>
+    <p>
+      <strong>Age (today):</strong>
+      <%= get_age_from_date(@patient.birthday.to_date)  %>
+    </p>
+  </div>
+
+  <div class="patient_sub_header">
+    <p>
+      <strong>Street:</strong>
+      <%= @patient.street %>
+    </p>
+    <p>
+      <strong>Zip Code:</strong>
+      <%= @patient.zip_code %>
+    </p>
+    <p>
+      <strong>City:</strong>
+      <%= @patient.city %>
+    </p>
+  </div>
+  <div class="patient_sub_header">
+    <p>
+      <strong>Phone:</strong>
+      <%= @patient.phone %>
+    </p>
+    <p>
+      <strong>Cell Phone:</strong>
+      <%= @patient.cell_phone %>
+    </p>
+    <p>
+      <strong>NAA:</strong>
+      <%= @patient.naa %>
+    </p>
+  </div>
+  <div class="patient_sub_header">
+    <%= link_to 'Edit Patient', edit_patient_path(@patient), class: "btn btn-default btn-primary" %>
+  </div>
+</div>
