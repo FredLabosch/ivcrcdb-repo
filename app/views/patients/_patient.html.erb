@@ -19,9 +19,10 @@
 <script type="text/javascript">
 
   $(document).ready(function(){
-      $("#patients td >input").on("change", function(){
+    var patients_ids = $("#patients td >input");
+    patients_ids.on("change", function(){
            $("#export_button").css("visibility", "");
-      })
+      });
 
       $("#export_button").on("click", function(){
          var ids =  $("#patients td >input"); // Hier alle selektierten ids

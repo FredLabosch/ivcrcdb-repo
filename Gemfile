@@ -13,6 +13,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'thin'
 
 gem 'pg'
+gem 'mysql2'
 gem 'rails_12factor' # for Heroku
 
 #gem 'tzinfo-data'

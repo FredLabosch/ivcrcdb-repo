@@ -1,50 +1,54 @@
-
 <%#= render :partial => "shared/subnavi" %>
 <section>
   <h1>
-    <%#= gravatar_for @user %>
+    <%#= gravatar_@examinationor @user %>
     Examination
   </h1>
 </section>
 <section>
-  <%= form_for @examination do |f| %>
-    <p>
-        <strong>Examination date:</strong>
-        <%= f.examination_date %>
-    </p>
-    <p>
-        <strong>Examiner:</strong>
-        <%= f.examiner %>
-    </p>
-    <p>
-        <strong>Age at examination:</strong>
-        <%= f.age_at_examination %>
-    </p>
+  <p>
+    <strong>Examination date:</strong>
+    <%= @examination.examination_date %>
+  </p>
+
+  <p>
+    <strong>Examiner:</strong>
+    <%= @examination.examiner %>
+  </p>
+
+  <p>
+    <strong>Age at examination:</strong>
+    <%= @examination.age_at_examination %>
+  </p>
+
   <p>
     <strong>Profession:</strong>
-    <%= f.profession %>
+    <%= @examination.profession %>
   </p>
   <p>
     <strong>External data:</strong>
-    <%= f.external_data  %>
+    <%= @examination.external_data %>
   </p>
+
   <p>
     <strong>Usable data:</strong>
-    <%= f.usable_data %>
+    <%= @examination.usable_data %>
   </p>
+
   <p>
     <strong>Comment patient:</strong>
-    <%= f.comment_patient %>
+    <%= @examination.comment_patient %>
   </p>
+
   <p>
     <strong>Comment examiner:</strong>
-    <%= f.comment_examiner %>
+    <%= @examination.comment_examiner %>
   </p>
+
   <p>
     <strong>Short description:</strong>
-    <%= f.short_description %>
+    <%= @examination.short_description %>
   </p>
-  <%end%>
   <%#= raise "#{@examination.to_yaml}"%>
-    <%= link_to 'Edit Examination', [@patient, @examination], class: "btn btn-default btn-primary" %>
+  <%= link_to 'Edit Examination', [@patient, @examination], class: "btn btn-de@examinationault btn-primary" %>
 </section>
