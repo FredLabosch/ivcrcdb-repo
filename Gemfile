@@ -16,6 +16,9 @@ gem 'pg'
 gem 'mysql2'
 gem 'rails_12factor' # for Heroku
 
+# Authentifizierung
+gem 'devise'
+
 #gem 'tzinfo-data'
 
 gem 'sass-rails', '4.0.1'
