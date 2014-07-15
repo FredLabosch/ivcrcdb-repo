@@ -1,5 +1,5 @@
 <tr>
-  <td><input type="checkbox" value="<%= patient.id %>"></input></td>
+  <td><input type="checkbox" data-id="<%= patient.id %>" </input></td>
   <td><%= patient.id %></td>
   <td><%= patient.name %></td>
   <td><%= patient.first_name %></td>
@@ -8,32 +8,71 @@
   <td><%= patient.city %></td>
   <td><%= patient.updated_at %></td>
   <td>
-        <%= link_to "show", patient, class: "btn btn-mini btn-primary" %>
-        <%= link_to "delete", patient, method: :delete, data: { confirm: "Are you sure you want to delete patient #{patient.first_name} #{patient.name}?" },
-                  class: "btn btn-mini btn-danger" %>
+    <%= link_to "show", patient, class: "btn btn-mini btn-primary" %>
+    <%= link_to "delete", patient, method: :delete, data: {confirm: "Are you sure you want to delete patient #{patient.first_name} #{patient.name}?"},
+                class: "btn btn-mini btn-danger" %>
   </td>
-
 </tr>
 
 
 <script type="text/javascript">
 
-  $(document).ready(function(){
-      $("#patients td >input").on("change", function(){
-           $("#export_button").css("visibility", "");
-      })
+  Array.prototype.getUnique = function () {
+    var u = {}, a = [];
+    for (var i = 0, l = this.length; i < l; ++i) {
+      if (u.hasOwnProperty(this[i])) {
+        continue;
+      }
+      a.push(this[i]);
+      u[this[i]] = 1;
+    }
+    return a;
+  };
 
-      $("#export_button").on("click", function(){
-         var ids =  $("#patients td >input"); // Hier alle selektierten ids
-          $.ajax({
-              method: "get",
-              url: "/patients/export",
-              data: ids,
-              success: function(){
+  ExportHandler = function () {
+    var self = this,
+        checked_patients = [],
+        export_button = $("#export_button");
 
-              }
-          })
+    this.init = function () {
+      $("#patients td >input").bind('change', self.handleSelects);
+      export_button.bind("click", self.do_export);
+    };
+
+    this.handleSelects = function () {
+      checked_patients = [];
+      $("#patients td >input:checked").each(function (i, el) {
+        checked_patients.push($(el).data('id'));
+      });
+      self.toggleExport();
+    };
+
+    this.toggleExport = function () {
+      if (checked_patients.length > 0) {
+        export_button.fadeIn(1000);
+      } else {
+        export_button.fadeOut(800)
+      }
+    };
+
+    this.do_export = function () {
+      console.log("dow export");
+      export_button.preventDefault();
+      $.ajax({
+        method: "post",
+        url: "/patients/export",
+        data: checked_patients.getUnique(),
+        success: function () {
+
+        }
       })
+    };
+
+    this.init();
+  };
+
+  $(document).ready(function () {
+    new ExportHandler();
   })
 
 </script>
