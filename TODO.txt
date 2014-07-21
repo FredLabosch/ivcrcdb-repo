@@ -1,0 +1,27 @@
+Hier ist aufgelistet, was für die IVCRCDB noch zu tun ist, aufgeteilt in "muss", "sollte" und "könnte".
+
+MUSS:
+-   Benutzerverwaltung mit einem Admin, der Benutzer anlegen und ihnen Rollen zuweisen kann.
+    Hierbei könnte der erste angelegte Benutzer immer der Admin sein (Was wäre eine bessere Möglichkeit hierfür?).
+
+    Folgende Rollen könnte es geben:
+    Admin(darf alles)
+    Editor(darf Patientendaten anlegen und löschen)
+    RestrictedEditor(darf nur eigene(!) Patientendaten anlegen und löschen)
+    Reader(darf Patientendaten ansehen und exportieren, aber nichts verändern)
+    Anmerkung: Sollte es noch eine Rolle geben, die anlegen und ändern kann, aber nicht löschen?
+    Außerdem sollte nur der Admin die komplette DB löschen und wiederherstellen können.
+
+-   Wiederherstellen der Daten(bank) aus einem Backup.
+
+-   Umfangreiche Suchfunktion mit Filtern für Patienten.
+
+SOLLTE:
+-   Es sollte bei den Filtern der Suchfunktion eine Volltextsuche geben, um alle Suchmöglichkeiten abzudecken.
+
+KÖNNTE:
+-   Die Filter der Suchfunktion könnten speicherbar sein.
+
+Fragen:
+- Sollte das Alter des Patienten zum Zeitpunkt der Untersuchung in der Untersuchung gespeichert oder jedesmal für die Anzeige berechnet werden?
+- Wie ändere ich am einfachsten eine Migration, damit z.B. Birthday bei Patient vom Typ Date statt string ist? Nach Möglichkeit soll nicht jedesmal eine neue Migration-Datei erzeugt werden, nur um eine Spalte zu ändern.

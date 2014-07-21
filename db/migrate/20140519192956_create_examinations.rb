@@ -2,6 +2,7 @@ class CreateExaminations < ActiveRecord::Migration
   def change
     create_table :examinations do |t|
       t.date :examination_date, :date
+      #t.time :examination_time, :date # geht aus irgendeinem Grund nicht - NoMethodError - so ein Kack!
       t.string :examiner, :string
       t.integer :age_at_examination, :integer
       t.string :profession, :string

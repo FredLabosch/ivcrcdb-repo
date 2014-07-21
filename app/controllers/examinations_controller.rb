@@ -46,6 +46,7 @@ class ExaminationsController < ApplicationController
   def examination_params
     params.require(:examination).permit(
     :examination_date,
+    :examination_time,
     :examiner,
     :profession,
     :external_data,

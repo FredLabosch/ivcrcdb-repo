@@ -2,6 +2,9 @@
 
 <div class="span6 offset3">
 <%= form_for([@patient, @examination]) do |f| %>
+    <% @examination.examination_date = get_current_date_as_string %>
+    <%#= @examination.examination_time = get_current_time %>
+    <%#= Das funktioniert erst, wenn @patient.birthday vom Type date ist!! @examination.age_at_examination = get_age_in_completed_years(@patient.birthday, @examination.examination_date) %>
     <%= render 'fields', f: f %>
     <%= f.submit "Add examination", class: "btn btn-large btn-success" %>
 <% end %>
