@@ -6,7 +6,10 @@ class ExaminationsController < ApplicationController
   end
 
   def new
-    @examination = Examination.new
+    @examination = Examination.new.tap do |ex|
+      ex.examination_date = Time.now
+      ex.age_at_examination = @patient.age
+    end
     #raise "#{@examination.inspect}"
     #raise "#{@examination.to_yaml}"
   end

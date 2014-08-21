@@ -3,6 +3,8 @@ class Patient < ActiveRecord::Base
 
   has_many :examinations, dependent: :destroy
 
+  after_save :determine_age
+
   class << self
 
     def export(ids)
@@ -11,5 +13,17 @@ class Patient < ActiveRecord::Base
     end
 
   end
+
+  private
+
+  def determine_age
+    return if self.birtday.nil? || self.birthday == ""
+    now = Time.now.utc.to_date
+    age = now.year - self.birtday.year - ((now.month > self.birtday.month || (now.month == self.birtday.month && now.day >= self.birtday.day)) ? 0 : 1)
+    self.age = age
+  rescue Exception
+    nil
+  end
+
 
 end

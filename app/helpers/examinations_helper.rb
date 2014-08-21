@@ -1,12 +1,12 @@
 module ExaminationsHelper
-  def get_current_date_as_string()
+  def get_current_date_as_string
     currentDate = Time.now
     currentDate.strftime("%d.%m.%Y")
   rescue NoMethodError
     "Keine Angabe"
   end
 
-  def get_current_time()
+  def get_current_time
     currentDate = Time.now
     currentDate.strftime("%H.%M")
   rescue NoMethodError

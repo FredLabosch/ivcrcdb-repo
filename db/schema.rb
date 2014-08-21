@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140711090801) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20140821074639) do
 
   create_table "allergies", force: true do |t|
     t.string "name"
@@ -26,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140711090801) do
   end
 
   create_table "examinations", force: true do |t|
-    t.date     "examination_date"
+    t.datetime "examination_date"
     t.date     "date"
     t.string   "examiner"
     t.string   "string"
@@ -50,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140711090801) do
     t.string   "name"
     t.string   "first_name"
     t.string   "gender"
-    t.string   "birthday"
+    t.datetime "birthday"
     t.integer  "age"
     t.string   "profession"
     t.string   "street"

@@ -1,7 +1,7 @@
 <%= render 'shared/error_messages', object: f.object %>
 
 <%= f.label :examination_date %>
-<%= f.text_field :examination_date %>
+<%= f.text_field :examination_date, value: @examination.examination_date.strftime("%d.%m.%Y %H:%M") %>
 
 <%#= f.label :examination_time %>
 <%#= f.text_field :examination_time %>
